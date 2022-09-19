@@ -1,0 +1,180 @@
+.container {
+  width: 100%;
+  height:100%;
+}
+.row{
+  padding: 7%;
+}
+.text-center{
+  display: flex;
+ font-size: 14px;
+ font-weight: 600;
+  justify-content:flex-start;
+  flex-direction: row;
+   
+}
+.input-container{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+.form-control{
+  border: none;
+  width: 200px;
+  height: 25px;
+  border-radius: 7px;
+  background-color:#c2c0c0
+}
+.input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 1%;
+ }
+.button{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 40px;  
+}
+button{
+  border: none;
+  width: 130px;
+  font-size: 10px;
+  color: white;
+  height: 20px;
+  border-radius: 7px;
+  background-color: #524f4f;
+  cursor: pointer;
+  height: 25px;
+}
+.search-item{
+border: none;
+}
+input{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.item-header{
+  display: flex;
+  font-size: 14px;
+  margin-top: 2%;
+   justify-content:flex-start;
+   flex-direction: row;
+}
+.search-control{
+  border: none;
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 30%;
+  height: 25px;
+  border-radius: 7px;
+  background-color: #c2c0c0;
+
+}
+.search-icon{
+   margin: 10px;
+ font-size: 13px;  
+}
+ .ng-mat-header-cell{
+   background-color: red;
+ }
+.col-form-label{
+    font-size: 15px;
+    color:#595757;  
+}
+span{
+    color: red;
+    font-size: 10px;
+}
+small{
+    color: red;
+    font-size: 10px;
+}
+.demo-table {
+  width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color:#c2c0c0;
+  }
+  .mat-header-cell{
+      border-bottom: none;
+      font-size: 13px;
+      justify-content: space-around;   
+  }
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  .mat-row:hover .mat-cell {
+    border:none;
+  }
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+.form-control.ng-touched.ng-invalid {
+    border:1px solid red;
+   }
+   .form-control.ng-touched.ng-valid {
+    border:1px solid green;
+   }
+
+   @media screen and (max-width: 900px) {
+    .container{
+      display: flex;
+     
+    }
+     .input-box{
+       flex-direction: column;
+     }
+     .input-container{
+       flex-direction: column; 
+     }
+     .row{
+       flex-direction: column; 
+     }
+     .table{
+       flex-direction: column;
+       font-size: 13px;
+     }
+     .button{
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-around;
+   
+     }
+   
+    
+
+}
+@media screen and (max-width: 540px) {
+ .container{
+   display: flex;
+  
+ }
+  .input-box{
+    flex-direction: column;
+  }
+  .input-container{
+    flex-direction: column; 
+  }
+  .row{
+    flex-direction: column; 
+  }
+  .table{
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .button{
+     align-items: flex-start;
+     display: flex;
+     justify-content: space-around;
+
+  }
+  
+}
+   

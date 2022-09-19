@@ -1,0 +1,90 @@
+
+<div class="container pt-5">
+    <div class="row justify-content-sm-center pt-5">
+        <div class="col-sm-6 shadow round pb-3">
+          <h1 class="text-center pt-3 text-secondary">Register New Doctors</h1>
+            <form [formGroup]="exform">
+                <div class="input-box">
+                      <div class="form-group">
+                        <label class="col-form-label">Name</label><br>
+                        <input formControlName="name" type="text" class="form-control"><br>
+                        <span *ngIf="name?.invalid && name?.touched" class="text-danger">Name is Required</span> 
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label">Userame</label><br>
+                        <input formControlName="username" type="text" class="form-control"><br>
+                        <span *ngIf="username?.invalid && username?.touched" class="text-danger">Username is Required</span> 
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label">Email</label><br>
+                        <input formControlName="email" type="text" class="form-control" ><br>
+                        <span *ngIf="email?.invalid && email?.touched" class="text-danger">Email is Required</span>
+                      </div>
+                </div>
+                <div class="input-container">
+                    <div class="form-group">
+                        <label class="col-form-label">Phone</label><br>
+                        <input formControlName="phone" type="number" class="form-control" ><br>
+                        <small *ngIf="phone?.invalid && phone?.touched" class="text-danger">Phone number is Required</small>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label">City</label><br>
+                        <input formControlName="city" class="form-control" ><br>
+                        <span *ngIf="city?.invalid && city?.touched" class="text-danger"> City is Required(maximun length 30)</span> 
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label">Website</label><br>
+                        <input formControlName="website" class="form-control" placeholder="man"><br>
+                        <span *ngIf="website?.invalid && website?.touched" class="text-danger"> Website Required(minimum length 5)</span> 
+                      </div>
+                </div> 
+              </form>
+              <div class="button">
+                <button (click)="clicksub()"  type="button" class="btn btn-primary">Register</button>
+              </div>
+        </div>
+        
+ <div class="table">
+  <mat-form-field class="search-control">
+    <fa-icon [icon]="faSearch" class="search-icon"></fa-icon >
+    <input matInput (keyup)="FilterChange($event)"  >
+  </mat-form-field>   
+<div class="item">
+<h2 class="item-header"> Doctor list</h2>
+</div>
+<table mat-table matSort [dataSource]="empdata" class="mat-elevation-z8 demo-table">
+<ng-container mat-sort-header matColumnDef="name">
+<th mat-header-cell *matHeaderCellDef>Name</th>
+<td mat-cell *matCellDef="let element">{{element.name}}</td>
+</ng-container>
+<ng-container matColumnDef="username">
+<th mat-header-cell *matHeaderCellDef>Userame</th>
+<td mat-cell *matCellDef="let element">{{element.username}}</td>
+</ng-container>
+<ng-container matColumnDef="email">
+<th mat-header-cell *matHeaderCellDef>Email</th>
+<td mat-cell *matCellDef="let element">{{element.email}}</td>
+</ng-container>
+<ng-container matColumnDef="phone">
+<th mat-header-cell *matHeaderCellDef>Phone</th>
+<td mat-cell *matCellDef="let element">{{element.phone}}</td>
+</ng-container>
+<ng-container matColumnDef="address">
+<th mat-header-cell *matHeaderCellDef>City</th>
+<td mat-cell *matCellDef="let element">{{element.address.city}}</td>
+</ng-container>
+<ng-container matColumnDef="website">
+<th mat-header-cell *matHeaderCellDef>Website</th>
+<td mat-cell *matCellDef="let element">{{element.website}}</td>
+</ng-container>
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr
+  mat-row
+  *matRowDef="let row; columns: displayedColumns;"
+></tr>
+</table>
+
+
+
+ </div>      
+    
