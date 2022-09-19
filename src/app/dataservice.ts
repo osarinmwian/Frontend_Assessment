@@ -17,11 +17,5 @@ export class DataService {
   GetUser(): Observable<Users>{
     return this.http.get<Users>(this.apiurl);
   }
-  Save(inputdata:any){
-    return this.http.post(this.apiurl,inputdata).pipe(
-      tap(()=>{
-this.RequiredRefresh.next();
-      })
-    );
-  }
+  
 }

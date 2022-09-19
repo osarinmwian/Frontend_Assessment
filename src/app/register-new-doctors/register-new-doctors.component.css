@@ -29,7 +29,7 @@ align-items: flex-start;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin: 1%;
+
  }
 .button{
   display: flex;
@@ -147,9 +147,6 @@ small{
         justify-content: space-around;
    
      }
-   
-    
-
 }
 @media screen and (max-width: 540px) {
  .container{
